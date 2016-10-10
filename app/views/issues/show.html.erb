@@ -1,5 +1,7 @@
 <%= render :partial => 'action_menu' %>
 
+<% if User.current.allowed_to?(:manage_project_activities, @project) %>
+
 <div style="float: right" class="harvest-timer" data-project='{"id":"<%= @project.id %>", "name": "<%=j @project.name %>"}' data-item='{"id": "<%= @issue.id %>", "name":"Issue #<%= @issue.id %>: <%=j @issue.subject %>"}'></div>
 <script>
   (function () {
@@ -14,6 +16,8 @@
     ph.parentNode.insertBefore(s, ph);
   })();
 </script>
+
+<% end %>
 
 <h2><%= issue_heading(@issue) %></h2>
 

@@ -29,7 +29,7 @@
   <%= content_tag 'span', :id => "issue_description_and_toolbar", :style => (@issue.new_record? ? nil : 'display:none') do %>
     <%= f.text_area :description,
                    :cols => 60,
-                   :value => (@issue.description.blank? ? "## Problem/Motivation\n(Why the issue was filed, steps to reproduce the problem, etc.)\n\n## Proposed resolution\nDescription of the proposed solution, the rationale behind it. Add notes about UI, API, and data model changes as necessary.)\n\n## Remaining tasks\n(reviews needed, tests to be written or run, documentation to be written, etc.)\n\n## Estimate notes/assumptions\n(Notes/assumptions related to the estimate.)\n\n## Scope change\n(If this issue changes the scope of the project, please add notes as to why.)\n\n## Original report by [username]\n(Text of the original report, for legacy issues whose initial post was not the issue summary.)" : @issue.description),
+                   :value => (@issue.description.blank? ? "## Problem/Motivation\n(Why the issue was filed, steps to reproduce the problem, etc.)\n\n## Proposed resolution\nDescription of the proposed solution, the rationale behind it. Add notes about UI, API, and data model changes as necessary.)\n\n## Remaining tasks\n(reviews needed, tests to be written or run, documentation to be written, etc.)\n\n## Estimate notes/assumptions\n(Notes/assumptions related to the estimate.)" : @issue.description),
                    :rows => (@issue.description.blank? ? 18 : [[10, @issue.description.length / 50].max, 100].min),
                    :accesskey => accesskey(:edit),
                    :class => 'wiki-edit',

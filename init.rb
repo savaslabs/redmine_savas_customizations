@@ -7,4 +7,8 @@ Redmine::Plugin.register :redmine_savas_customizations do
   version '0.2.0'
   url 'https://github.com/savaslabs/redmine-savas-customizations'
   author_url 'http://savaslabs.com'
+  settings :default => {
+             :issue_template => '',
+           },
+  :partial => 'settings/savaslabs'
 end

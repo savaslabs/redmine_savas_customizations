@@ -1,4 +1,4 @@
 en:
   label_savaslabs_issue_template: "Enter the markup to use as the default issue template."
   help_savaslabs_issue_template: "Use Markdown format please."
-  button_edit: "Comment"
+  button_edit: "Edit"

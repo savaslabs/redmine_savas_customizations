@@ -2,6 +2,8 @@
 
 <% if User.current.allowed_to?(:manage_project_activities, @project) %>
 
+<script type="text/javascript">document.getElementsByClassName("icon icon-edit")[0].innerHTML = "Comment";</script>
+
 <div style="float: right" class="harvest-timer" data-project='{"id":"<%= @project.id %>", "name": "<%=j @project.name %>"}' data-item='{"id": "<%= @issue.id %>", "name":"Issue #<%= @issue.id %>: <%=j @issue.subject %>"}'></div>
 <script>
   (function () {
